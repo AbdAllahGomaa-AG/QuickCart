@@ -150,15 +150,15 @@ export default function Cart () {
         <link rel='icon' href='/LOGO.png' type='image/png' />
         <meta name='description' content='Cart' />
       </Helmet>
-      <section className='bg-white py-8 antialiased dark:bg-gray-900 md:py-16'>
+      <section className='bg-white py-8 antialiased  md:py-16'>
         <div className='mx-auto max-w-screen-xl px-4 2xl:px-0'>
           <Toaster position='top-right' reverseOrder={false} />
 
           {/* Cart Header */}
-          <div className='flex flex-wrap items-center justify-between border-b border-gray-200 pb-4 mb-6 dark:border-gray-700'>
-            <h2 className='text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-2'>
+          <div className='flex flex-wrap items-center justify-between border-b border-gray-200 pb-4 mb-6 '>
+            <h2 className='text-2xl font-bold text-gray-900  flex items-center gap-2'>
                Shopping Cart
-              <span className='text-sm font-medium text-gray-500 dark:text-gray-400'>
+              <span className='text-sm font-medium text-gray-500 '>
                 ({Products.length} items)
               </span>
             </h2>
@@ -198,7 +198,7 @@ export default function Cart () {
                   {Products.map(product => (
                     <div
                       key={product._id}
-                      className='flex flex-col md:flex-row items-center md:items-start justify-between border border-gray-200 shadow-md rounded-xl bg-white p-4 dark:border-gray-700 dark:bg-gray-800 md:p-6 gap-6'
+                      className='flex flex-col md:flex-row items-center md:items-start justify-between border border-gray-200 shadow-md rounded-xl bg-white p-4  md:p-6 gap-6'
                     >
                       {/* Image */}
                       <div className='shrink-0'>
@@ -211,7 +211,7 @@ export default function Cart () {
 
                       {/* Product Info */}
                       <div className='flex-1 min-w-0'>
-                        <h3 className='text-base font-semibold text-gray-900 dark:text-white'>
+                        <h3 className='text-base font-semibold text-gray-900 '>
                           {product.product.title}
                         </h3>
                         <p className='text-sm text-gray-500 mt-1'>
@@ -222,7 +222,7 @@ export default function Cart () {
                         <div className='flex flex-wrap items-center gap-4 mt-3'>
                           <button
                             type='button'
-                            className='inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 hover:underline dark:text-gray-400 dark:hover:text-white'
+                            className='inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 hover:underline '
                           >
                             <i className='fas fa-heart mr-1'></i> Add to
                             Favorites
@@ -232,7 +232,7 @@ export default function Cart () {
                               removeProductFromCart(product.product._id)
                             }
                             type='button'
-                            className='inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500'
+                            className='inline-flex items-center text-sm font-medium text-red-600 hover:underline '
                           >
                             <i className='fas fa-trash-alt mr-1'></i> Remove
                           </button>
@@ -252,7 +252,7 @@ export default function Cart () {
                                 'dec'
                               )
                             }
-                            className='h-6 w-6 flex items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 disabled:cursor-not-allowed disabled:bg-gray-200 text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white'
+                            className='h-6 w-6 flex items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 disabled:cursor-not-allowed disabled:bg-gray-200 text-gray-900 '
                           >
                             {loadingProductDec[product.product._id] ? (
                               <i className='fas fa-spinner animate-spin text-xs'></i>
@@ -272,7 +272,7 @@ export default function Cart () {
                                 'inc'
                               )
                             }
-                            className='h-6 w-6 flex items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 disabled:cursor-not-allowed disabled:bg-gray-200 text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white'
+                            className='h-6 w-6 flex items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 disabled:cursor-not-allowed disabled:bg-gray-200 text-gray-900 '
                           >
                             {loadingProductInc[product.product._id] ? (
                               <i className='fas fa-spinner animate-spin text-xs'></i>
@@ -283,7 +283,7 @@ export default function Cart () {
                         </div>
 
                         {/* Price */}
-                        <p className='text-base font-bold text-gray-900 dark:text-white'>
+                        <p className='text-base font-bold text-gray-900 '>
                           {product.price * product.count} $
                         </p>
                       </div>
@@ -297,7 +297,7 @@ export default function Cart () {
                     alt='No products in cart'
                     className='w-60 h-60 object-contain'
                   />
-                  <p className='text-lg font-semibold text-gray-600 dark:text-gray-300'>
+                  <p className='text-lg font-semibold text-gray-600 '>
                     No products in cart
                   </p>
                   <NavLink
@@ -311,33 +311,33 @@ export default function Cart () {
 
               {/* Order Summary */}
               <div className='mt-8 lg:mt-0 lg:w-96 w-full'>
-                <div className='space-y-4 border border-gray-200 shadow-lg rounded-xl bg-white p-6 dark:border-gray-700 dark:bg-gray-800'>
-                  <p className='text-xl font-semibold text-gray-900 dark:text-white'>
+                <div className='space-y-4 border border-gray-200 shadow-lg rounded-xl bg-white p-6 '>
+                  <p className='text-xl font-semibold text-gray-900 '>
                     Order Summary
                   </p>
 
                   <div className='space-y-2 text-sm'>
                     <div className='flex justify-between'>
-                      <span className='text-gray-500 dark:text-gray-400'>
+                      <span className='text-gray-500 '>
                         Subtotal
                       </span>
-                      <span className='font-medium text-gray-900 dark:text-white'>
+                      <span className='font-medium text-gray-900 '>
                         {totalCartPrice} $
                       </span>
                     </div>
                     <div className='flex justify-between'>
-                      <span className='text-gray-500 dark:text-gray-400'>
+                      <span className='text-gray-500 '>
                         Tax
                       </span>
-                      <span className='font-medium text-gray-900 dark:text-white'>
+                      <span className='font-medium text-gray-900 '>
                         $0
                       </span>
                     </div>
                     <div className='flex justify-between border-t pt-2'>
-                      <span className='font-bold text-gray-900 dark:text-white'>
+                      <span className='font-bold text-gray-900 '>
                         Total
                       </span>
-                      <span className='font-bold text-gray-900 dark:text-white'>
+                      <span className='font-bold text-gray-900 '>
                         {totalCartPrice} $
                       </span>
                     </div>
@@ -362,7 +362,7 @@ export default function Cart () {
                   </Link>
 
                   <div className='flex items-center justify-center gap-2 text-sm'>
-                    <span className='text-gray-500 dark:text-gray-400'>or</span>
+                    <span className='text-gray-500 '>or</span>
                     <NavLink
                       to='/shop'
                       className='text-purple font-medium hover:underline'

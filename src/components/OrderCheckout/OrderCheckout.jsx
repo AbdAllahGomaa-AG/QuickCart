@@ -82,12 +82,12 @@ export default function OrderCheckout() {
         <meta name="description" content="Checkout" />
       </Helmet>
 
-      <section className="bg-gray-50 dark:bg-gray-900 min-h-screen py-24">
+      <section className="bg-gray-50 min-h-screen py-24">
         <Toaster position="top-right" reverseOrder={false} />
         <div className="flex flex-col items-center justify-start pt-8 px-6 py-8 mx-auto lg:py-0">
-          <div className="w-full bg-white rounded-xl shadow-2xl dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+          <div className="w-full bg-white rounded-xl shadow-2xl md:mt-0 sm:max-w-md xl:p-0">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+              <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
                 Checkout
               </h1>
               <form
@@ -98,7 +98,7 @@ export default function OrderCheckout() {
                 <div>
                   <label
                     htmlFor="shippingAddress.city"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-gray-900"
                   >
                     Your city
                   </label>
@@ -111,14 +111,12 @@ export default function OrderCheckout() {
                     id="city"
                     placeholder="Your city"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
-                 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 
-                 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
-                 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                   />
                   {Formik.errors.shippingAddress?.city &&
                     Formik.touched.shippingAddress?.city && (
                       <div
-                        className="p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+                        className="p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50"
                         role="alert"
                       >
                         {Formik.errors.shippingAddress.city}
@@ -130,7 +128,7 @@ export default function OrderCheckout() {
                 <div>
                   <label
                     htmlFor="shippingAddress.phone"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-gray-900"
                   >
                     Your phone
                   </label>
@@ -143,14 +141,12 @@ export default function OrderCheckout() {
                     id="phone"
                     placeholder="Your phone"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
-                 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 
-                 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
-                 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                   />
                   {Formik.errors.shippingAddress?.phone &&
                     Formik.touched.shippingAddress?.phone && (
                       <div
-                        className="p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+                        className="p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50"
                         role="alert"
                       >
                         {Formik.errors.shippingAddress.phone}
@@ -162,7 +158,7 @@ export default function OrderCheckout() {
                 <div>
                   <label
                     htmlFor="shippingAddress.details"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-gray-900"
                   >
                     Your details
                   </label>
@@ -175,14 +171,12 @@ export default function OrderCheckout() {
                     id="details"
                     placeholder="Your details"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
-                 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 
-                 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
-                 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                   />
                   {Formik.errors.shippingAddress?.details &&
                     Formik.touched.shippingAddress?.details && (
                       <div
-                        className="p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+                        className="p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50"
                         role="alert"
                       >
                         {Formik.errors.shippingAddress.details}
@@ -198,8 +192,8 @@ export default function OrderCheckout() {
     transition-all duration-200 
     ${
       !(Formik.isValid && Formik.dirty) || Object.keys(Formik.errors).length > 0
-        ? "bg-purple/50 text-gray-500 cursor-not-allowed dark:bg-gray-600 dark:text-gray-400"
-        : "text-white bg-purple hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-purple/50 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 cursor-pointer"
+        ? "bg-purple/50 text-gray-500 cursor-not-allowed"
+        : "text-white bg-purple hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-purple/50 cursor-pointer"
     }`}
                 >
                   checkout

@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../../assets/images/cover/elements01.png'
+import image from '../../assets/images/cover/Pic.png'
 
 
 export default function Slider() {
@@ -8,13 +8,13 @@ export default function Slider() {
   <img src={image} alt='' className='w-full h-full object-cover' />
 
   <div className='absolute px-4 sm:px-8 lg:px-24 max-w-[90%] sm:max-w-[70%] text-white'>
-    <p className='text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight text-[#39245F] drop-shadow-md'>
+    <p className='text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white drop-shadow-md'>
       Shopping with us for <br />
       better quality and the <br />
       best price
     </p>
 
-    <p className='text-sm sm:text-lg text-black mt-4 drop-shadow-sm'>
+    <p className='text-sm sm:text-lg text-white mt-4 drop-shadow-sm'>
       We have prepared special discounts for you on grocery products.
       <br />
       Don't miss these opportunities...
@@ -30,11 +30,11 @@ export default function Slider() {
           <p className='text-lg sm:text-xl font-bold leading-tight text-[#DC2626]'>
             $21.67
           </p>
-          <p className='text-lg sm:text-xl font-semibold leading-tight line-through text-gray-800'>
+          <p className='text-lg sm:text-xl font-semibold leading-tight line-through text-white/70'>
             $26.67
           </p>
         </div>
-        <p className='text-xs sm:text-sm text-gray-900 font-medium'>
+        <p className='text-xs sm:text-sm text-white font-medium'>
           Don't miss this limited time offer.
         </p>
       </div>

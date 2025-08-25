@@ -163,13 +163,13 @@ export default function ForgetPassword () {
   return (
     <>
       <Toaster position='top-right' reverseOrder={false} />
-      <section className='bg-gray-50 dark:bg-gray-900 min-h-screen py-24'>
+      <section className='bg-gray-50 min-h-screen py-24'>
         <div className='flex flex-col items-center justify-start pt-8 px-6 py-8 mx-auto lg:py-0'>
-          <div className='w-full bg-white rounded-xl shadow-2xl dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700'>
+          <div className='w-full bg-white rounded-xl shadow-2xl md:mt-0 sm:max-w-md xl:p-0'>
             {/*  */}
             {step === 1 ? (
               <div className='p-6 space-y-4 md:space-y-6 sm:p-8'>
-                <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white'>
+                <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl'>
                   Forgot Password
                 </h1>
                 <form
@@ -180,7 +180,7 @@ export default function ForgetPassword () {
                   <div>
                     <label
                       htmlFor='email'
-                      className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
+                      className='block mb-2 text-sm font-medium text-gray-900'
                     >
                       Your Email
                     </label>
@@ -193,14 +193,12 @@ export default function ForgetPassword () {
                       id='email'
                       placeholder='name@company.com'
                       className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
-                                focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 
-                                dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
-                                dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                                focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
                     />
                     {/* error email */}
                     {Formik.errors.email && Formik.touched.email && (
                       <div
-                        className='p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400'
+                        className='p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50'
                         role='alert'
                       >
                         {Formik.errors.email}
@@ -221,8 +219,8 @@ export default function ForgetPassword () {
                               !Formik.values.email ||
                               !!Formik.errors.email ||
                               !Formik.dirty
-                                ? 'bg-purple/50 text-gray-500 cursor-not-allowed dark:bg-gray-600 dark:text-gray-400'
-                                : 'text-white bg-purple hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-purple/50 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 cursor-pointer'
+                                ? 'bg-purple/50 text-gray-500 cursor-not-allowed'
+                                : 'text-white bg-purple hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-purple/50 cursor-pointer'
                             }`}
                   >
                     Send Reset Link
@@ -233,7 +231,7 @@ export default function ForgetPassword () {
             {/*  */}
             {step === 2 ? (
               <div className='p-6 space-y-4 md:space-y-6 sm:p-8'>
-                <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white'>
+                <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl'>
                   Forgot Password
                 </h1>
                 <form
@@ -244,7 +242,7 @@ export default function ForgetPassword () {
                   <div>
                     <label
                       htmlFor='resetCode'
-                      className='block mb-2 text-sm  text-gray-900 dark:text-white font-bold'
+                      className='block mb-2 text-sm  text-gray-900 font-bold'
                     >
                       Verify Reset Code
                     </label>
@@ -257,15 +255,13 @@ export default function ForgetPassword () {
                       id='resetCode'
                       placeholder='Enter your reset code'
                       className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
-                                focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 
-                                dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
-                                dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                                focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
                     />
                     {/* error resetCode */}
                     {FormikVerifyResetCode.errors.resetCode &&
                       FormikVerifyResetCode.touched.resetCode && (
                         <div
-                          className='p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400'
+                          className='p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50'
                           role='alert'
                         >
                           {Formik.errors.resetCode}
@@ -286,8 +282,8 @@ export default function ForgetPassword () {
                               !FormikVerifyResetCode.values.resetCode ||
                               !!FormikVerifyResetCode.errors.resetCode ||
                               !FormikVerifyResetCode.dirty
-                                ? 'bg-purple/50 text-gray-500 cursor-not-allowed dark:bg-gray-600 dark:text-gray-400'
-                                : 'text-white bg-purple hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-purple/50 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 cursor-pointer'
+                                ? 'bg-purple/50 text-gray-500 cursor-not-allowed'
+                                : 'text-white bg-purple hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-purple/50 cursor-pointer'
                             }`}
                   >
                     Verify Reset Code
@@ -298,7 +294,7 @@ export default function ForgetPassword () {
             {/*  */}
             {step === 3 ? (
               <div className='p-6 space-y-4 md:space-y-6 sm:p-8'>
-                <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white'>
+                <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl'>
                   Forgot Password
                 </h1>
                 <form
@@ -309,7 +305,7 @@ export default function ForgetPassword () {
                   <div>
                     <label
                       htmlFor='newPassword'
-                      className='block mb-2 text-sm  text-gray-900 dark:text-white font-bold'
+                      className='block mb-2 text-sm  text-gray-900 font-bold'
                     >
                       create new password
                     </label>
@@ -322,15 +318,13 @@ export default function ForgetPassword () {
                       id='newPassword'
                       placeholder='Enter your new password'
                       className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
-                                focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 
-                                dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
-                                dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                                focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
                     />
                     {/* error newPassword */}
                     {FormikResetPassword.errors.newPassword &&
                       FormikResetPassword.touched.newPassword && (
                         <div
-                          className='p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400'
+                          className='p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50'
                           role='alert'
                         >
                           {FormikResetPassword.errors.newPassword}
@@ -351,8 +345,8 @@ export default function ForgetPassword () {
                               !FormikResetPassword.values.newPassword ||
                               !!FormikResetPassword.errors.newPassword ||
                               !FormikResetPassword.dirty
-                                ? 'bg-purple/50 text-gray-500 cursor-not-allowed dark:bg-gray-600 dark:text-gray-400'
-                                : 'text-white bg-purple hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-purple/50 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 cursor-pointer'
+                                ? 'bg-purple/50 text-gray-500 cursor-not-allowed'
+                                : 'text-white bg-purple hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-purple/50 cursor-pointer'
                             }`}
                   >
                     Reset Password

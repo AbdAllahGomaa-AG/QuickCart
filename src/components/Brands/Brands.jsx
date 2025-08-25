@@ -31,7 +31,7 @@ export default function Brands({ limit }) {
   const displayedBrands = limit ? categories.slice(0, limit) : categories;
 
   return (
-    <div className="w-[95%] lg:w-[80%] mx-auto mt-10">
+    <div className="w-[80%] lg:w-[80%] mx-auto mt-10">
       {/* Header */}
       <div className="flex flex-wrap sm:flex-nowrap justify-between items-center py-6">
         {limit > 0 ? (
@@ -55,7 +55,7 @@ export default function Brands({ limit }) {
                 <li className="inline-flex items-center">
                   <NavLink
                     to="/"
-                    className="inline-flex items-center text-xl font-bold text-gray-700 hover:text-purple dark:text-gray-400 dark:hover:text-white"
+                    className="inline-flex items-center text-xl font-bold text-gray-700 hover:text-purple "
                   >
                     Home
                   </NavLink>
@@ -77,7 +77,7 @@ export default function Brands({ limit }) {
                         d="m1 9 4-4-4-4"
                       />
                     </svg>
-                    <span className="ms-1 text-xl font-bold text-gray-700 hover:text-purple md:ms-2 dark:text-gray-400 dark:hover:text-white">
+                    <span className="ms-1 text-xl font-bold text-gray-700 hover:text-purple md:ms-2">
                       Brands
                     </span>
                   </div>

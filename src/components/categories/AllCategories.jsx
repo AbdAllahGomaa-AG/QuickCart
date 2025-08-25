@@ -32,7 +32,7 @@ export default function AllCategories() {
               <li className="inline-flex items-center">
                 <NavLink
                   to="/"
-                  className="inline-flex items-center text-xl font-bold text-gray-700 hover:text-purple dark:text-gray-400 dark:hover:text-white"
+                  className="inline-flex items-center text-xl font-bold text-gray-700 hover:text-purple"
                 >
                   Home
                 </NavLink>
@@ -54,7 +54,7 @@ export default function AllCategories() {
                       d="m1 9 4-4-4-4"
                     />
                   </svg>
-                  <span className="ms-1 text-xl font-bold text-gray-700 hover:text-purple md:ms-2 dark:text-gray-400 dark:hover:text-white">
+                  <span className="ms-1 text-xl font-bold text-gray-700 hover:text-purple md:ms-2">
                     All Categories
                   </span>
                 </div>

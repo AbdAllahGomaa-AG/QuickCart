@@ -28,7 +28,7 @@ export default function Categories() {
 
   return (
     <>
-      <div className="w-[95%] lg:w-[80%] mx-auto mt-10">
+      <div className="w-[80%] lg:w-[80%] mx-auto mt-10">
         {/* Header */}
         <div className="flex flex-wrap sm:flex-nowrap justify-between items-center py-6">
           <h2 className="text-xl md:text-2xl font-bold flex flex-wrap items-center gap-3 border-l-8 pl-2  border-purple">

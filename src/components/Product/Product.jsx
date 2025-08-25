@@ -11,7 +11,7 @@ export default function Product({ product }) {
   return (
     <>
       <div className="max-w-2xl mx-auto ">
-        <div className="bg-white shadow-2xl px-2 border border-gray-300 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 hover:scale-[1.01] transition-all duration-200">
+        <div className="bg-white shadow-2xl px-2 border border-gray-300 rounded-lg max-w-sm hover:scale-[1.01] transition-all duration-200">
           <NavLink to={`/specific-product/${product._id}`}>
             <img
               className="rounded-t-lg p-8 cursor-pointer h-52 w-full object-contain"
@@ -24,7 +24,7 @@ export default function Product({ product }) {
               to={`/specific-product/${product._id}`}
               className="cursor-pointer"
             >
-              <h3 className="text-gray-900 font-semibold text-lg tracking-tight dark:text-white line-clamp-1">
+              <h3 className="text-gray-900 font-semibold text-lg tracking-tight line-clamp-1">
                 {product.title}
               </h3>
             </NavLink>
@@ -60,12 +60,12 @@ export default function Product({ product }) {
                 );
               })}
 
-              <span className="bg-purple/90 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
+              <span className="bg-purple/90 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">
                 {product.ratingsAverage}
               </span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-xl font-bold text-gray-900 dark:text-white">
+              <span className="text-xl font-bold text-gray-900">
                 {product.price}$
               </span>
               <div className="flex items-center gap-3">
@@ -73,13 +73,13 @@ export default function Product({ product }) {
                   className="p-2 rounded-full "
                   onClick={() => CartAddServices(product._id, setCart)}
                 >
-                  <i className="fa-solid fa-cart-plus text-black dark:text-white text-lg hover:text-red-600 transition-all duration-200"></i>
+                  <i className="fa-solid fa-cart-plus text-black text-lg hover:text-red-600 transition-all duration-200"></i>
                 </button>
                 <button
                   onClick={() => WishlistAddServices(product._id)}
                   className="p-2 rounded-full "
                 >
-                  <i className="fa-solid fa-heart text-black dark:text-white text-lg hover:text-red-600 transition-all duration-200"></i>
+                  <i className="fa-solid fa-heart text-black text-lg hover:text-red-600 transition-all duration-200"></i>
                 </button>
               </div>
             </div>

@@ -65,31 +65,31 @@ export default function Wishlist() {
 
   return (
     <>
-    <Helmet>
-      <title>Wishlist</title>
-    </Helmet>
+      <Helmet>
+        <title>Wishlist</title>
+      </Helmet>
       {loading ? (
         <LoadingScreen />
       ) : (
-        <section className="bg-white py-8 antialiased dark:bg-gray-900 ">
+        <section className="bg-white py-8 antialiased">
           <div className="mx-auto max-w-screen-xl px-2 2xl:px-0">
             {/* Cart Body */}
             <div className="sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
               {/* Products Section */}
               <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl gap-4">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                <h2 className="text-2xl font-bold text-gray-900">
                   Wishlist ({wishlist.length})
                 </h2>
                 {/* Sample Product */}
                 <div className="space-y-6 gap-4 mt-4">
                   {wishlist.map((item) => {
                     return (
-                      <div className="border border-gray-200 shadow-lg rounded-xl bg-white p-4 dark:border-gray-700 dark:bg-gray-800 md:p-6">
+                      <div className="border border-gray-200 shadow-lg rounded-xl bg-white p-4 md:p-6">
                         <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
                           {/* Image */}
                           <a className="shrink-0 md:order-1">
                             <img
-                              className="w-32 dark:hidden"
+                              className="w-32"
                               src={item.imageCover}
                               alt="Product Name"
                             />
@@ -105,7 +105,7 @@ export default function Wishlist() {
 
                           {/* Product Info */}
                           <div className="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
-                            <a className="text-base font-medium text-gray-900 hover:underline dark:text-white">
+                            <a className="text-base font-medium text-gray-900 hover:underline">
                               {item.title}
                               <p className="text-sm text-gray-500 mt-2">
                                 price: {item.price} $
@@ -119,7 +119,7 @@ export default function Wishlist() {
                                   CartAddServices(item._id, setCart)
                                 }
                                 type="button"
-                                className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 hover:underline dark:text-gray-400 dark:hover:text-white"
+                                className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 hover:underline"
                               >
                                 <svg
                                   className="me-1.5 h-5 w-5"
@@ -144,7 +144,7 @@ export default function Wishlist() {
                                   removeProductFromWishlist(item._id)
                                 }
                                 type="button"
-                                className="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500"
+                                className="inline-flex items-center text-sm font-medium text-red-600 hover:underline"
                               >
                                 <svg
                                   className="me-1.5 h-5 w-5"

@@ -362,13 +362,13 @@ export default function NavBar () {
       </div>
       {/* Drawer component */}
       <div
-        className={`rounded-tr-[30px] border-r-[3px] border-gray-200 fixed top-0 left-0 z-40 h-screen p-2 overflow-y-auto bg-white w-64 dark:bg-gray-800 transition-transform duration-300 ${
+        className={`rounded-tr-[30px] border-r-[3px] border-gray-200 fixed top-0 left-0 z-40 h-screen p-2 overflow-y-auto bg-white w-64 transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         <button
           onClick={() => setIsOpen(false)}
-          className='text-gray-400 bg-transparent border border-gray-500 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-900 rounded-xl text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white'
+          className='text-gray-400 bg-transparent border border-gray-500 hover:border-gray-500 hover:bg-gray-200 hover:text-gray-900 rounded-xl text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center'
         >
           <svg
             className='w-3 h-3'
@@ -388,54 +388,53 @@ export default function NavBar () {
           <span className='sr-only'>Close menu</span>
         </button>
 
-<div className="py-2 overflow-y-auto mt-10">
-  <ul className="space-y-1 font-medium text-sm">
-    {[
-      { icon: "fa-home", text: "Home", link: "/home" },
-      { icon: "fa-tags", text: "Brands", link: "/brands" },
-      { icon: "fa-list", text: "Categories", link: "/categories" },
-      { icon: "fa-box", text: "Products", link: "/products" },
-      { icon: "fa-heart", text: "Wishlist", link: "/wishlist" },
-      { icon: "fa-shopping-cart", text: "Cart", link: "/cart" },
-      { icon: "fa-phone", text: "Contact", link: "/contactUs" },
-    ].map((item, idx) => (
-      <li key={idx}>
-        <NavLink
-          to={item.link}
-          onClick={() => setIsOpen(false)}
-          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition"
-        >
-          <i
-            className={`fas ${item.icon} fa-lg text-gray-500 dark:text-gray-400 mr-2`}
-          ></i>
-          {item.text}
-        </NavLink>
-      </li>
-    ))}
+        <div className='py-2 overflow-y-auto mt-10'>
+          <ul className='space-y-1 font-medium text-sm'>
+            {[
+              { icon: 'fa-home', text: 'Home', link: '/home' },
+              { icon: 'fa-tags', text: 'Brands', link: '/brands' },
+              { icon: 'fa-list', text: 'Categories', link: '/categories' },
+              { icon: 'fa-box', text: 'Products', link: '/products' },
+              { icon: 'fa-heart', text: 'Wishlist', link: '/wishlist' },
+              { icon: 'fa-shopping-cart', text: 'Cart', link: '/cart' },
+              { icon: 'fa-phone', text: 'Contact', link: '/contactUs' }
+            ].map((item, idx) => (
+              <li key={idx}>
+                <NavLink
+                  to={item.link}
+                  onClick={() => setIsOpen(false)}
+                  className='flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 transition'
+                >
+                  <i
+                    className={`fas ${item.icon} fa-lg text-gray-500 mr-2`}
+                  ></i>
+                  {item.text}
+                </NavLink>
+              </li>
+            ))}
 
-    <li>
-      {Token ? (
-        <NavLink
-          to="/"
-          onClick={logout}
-          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition"
-        >
-          <i className="fas fa-sign-out-alt fa-lg text-gray-500 dark:text-gray-400 mr-2"></i>
-          Logout
-        </NavLink>
-      ) : (
-        <NavLink
-          to="/login"
-          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition"
-        >
-          <i className="fas fa-user fa-lg text-gray-500 dark:text-gray-400 mr-2"></i>
-          Login
-        </NavLink>
-      )}
-    </li>
-  </ul>
-</div>
-
+            <li>
+              {Token ? (
+                <NavLink
+                  to='/'
+                  onClick={logout}
+                  className='flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 transition'
+                >
+                  <i className='fas fa-sign-out-alt fa-lg text-gray-500 mr-2'></i>
+                  Logout
+                </NavLink>
+              ) : (
+                <NavLink
+                  to='/login'
+                  className='flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 transition'
+                >
+                  <i className='fas fa-user fa-lg text-gray-500 mr-2'></i>
+                  Login
+                </NavLink>
+              )}
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   )
