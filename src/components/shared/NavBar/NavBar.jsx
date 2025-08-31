@@ -394,7 +394,7 @@ export default function NavBar () {
               { icon: 'fa-home', text: 'Home', link: '/home' },
               { icon: 'fa-tags', text: 'Brands', link: '/brands' },
               { icon: 'fa-list', text: 'Categories', link: '/categories' },
-              { icon: 'fa-box', text: 'Products', link: '/products' },
+              { icon: 'fa-box', text: 'Products', link: '/all-product' },
               { icon: 'fa-heart', text: 'Wishlist', link: '/wishlist' },
               { icon: 'fa-shopping-cart', text: 'Cart', link: '/cart' },
               { icon: 'fa-phone', text: 'Contact', link: '/contactUs' }
